@@ -86,4 +86,7 @@
 "Now_file_write_error_warn" = "Error while creating now file !!!";
 
 //Message for succefull created package
-"Package_succesfully_created" = "OCS MacOSX custom install package successfully created at %@";
+"Package_succesfully_created" = "OCS MacOSX custom install package successfully created";
+
+//Message for succefull created package_comment
+"Package_succesfully_created_comment" = "ocspackage.pkg has been created in %@ directory";

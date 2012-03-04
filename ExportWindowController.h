@@ -36,6 +36,7 @@
 - (IBAction) terminateApp:(id)sender;
 - (IBAction) backConfigurationWindow:(id)sender;
 - (IBAction) chooseExportPath:(id)sender;
+- (BOOL) removeFile:(NSString *)path;
 
 
 @end

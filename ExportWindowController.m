@@ -75,7 +75,7 @@
 		} else {
 			//We delete file
 			[existsWrn release];
-			if(![filemgr removeFileAtPath:ocsPkgPath handler:nil]) {
+			if(![self removeFile:ocsPkgPath]) {
 				[context displayAlert:NSLocalizedString(@"Ocspackage_remove_error_warn", @"Warning about ocspackage remove error") comment:NSLocalizedString(@"Ocspackage_remove_error_warn_comment",@"Warning about ocspackage remove error comment") style:NSCriticalAlertStyle];
 				return;
 			}
@@ -89,11 +89,10 @@
 	}
 	
 	//We delete plugins directory for future silent installs
-	if ([filemgr fileExistsAtPath:ocsPkgPluginsPath]) {
-		if (![filemgr removeFileAtPath:ocsPkgPluginsPath handler:nil]) {
-			[context displayAlert:NSLocalizedString(@"Plugins_remove_error_warn", @"Warning about plugins directory remove error") comment:NSLocalizedString(@"Ocspackage_write_error_warn_comment",@"Warning about ocspackage write error comment") style:NSCriticalAlertStyle];
-			return;
-		}
+	if (![self removeFile:ocsPkgPluginsPath]) {
+		[context displayAlert:NSLocalizedString(@"Plugins_remove_error_warn", @"Warning about plugins directory remove error") comment:NSLocalizedString(@"Ocspackage_write_error_warn_comment",@"Warning about ocspackage write error comment") style:NSCriticalAlertStyle];
+		[self removeFile:ocsPkgPath];
+		return;
 	}
 	
 	//We copy preinstall script
@@ -102,6 +101,7 @@
 	if ([filemgr fileExistsAtPath:preinstallPath]) {
 		if (![filemgr copyPath:preinstallPath toPath:[NSString stringWithFormat:@"%@/preinstall",ocsPkgResourcesPath] handler:nil]) {
 			[context displayAlert:NSLocalizedString(@"Preinstall_copy_error_warn",@"Warning about preinstall copy error") comment:NSLocalizedString(@"Ocspackage_write_error_warn_comment", @"Warning about ocspackage write error comment") style:NSCriticalAlertStyle];
+			[self removeFile:ocsPkgPath];
 			return;
 		}
 	}
@@ -136,6 +136,7 @@
 	
 	if(![ocsAgentCfgContent writeToFile:ocsPkgCfgFilePath atomically: YES encoding:NSUTF8StringEncoding error:NULL]) {
 		[context displayAlert:NSLocalizedString(@"Configuration_file_write_error_warn",@"Warning about ocsinventory-agent.cfg file write error") comment:NSLocalizedString(@"Ocspackage_write_error_warn_comment", @"Warning about ocspackage write error comment") style:NSCriticalAlertStyle];
+		[self removeFile:ocsPkgPath];
 		return;
 	}
 	
@@ -165,6 +166,7 @@
 	
 	if (![modulesCfgContent writeToFile:ocsPkgModulesFilePath atomically: YES encoding:NSUTF8StringEncoding error:NULL]) {
 		[context displayAlert:NSLocalizedString(@"Modules_file_write_error_warn",@"Warning about modules.conf file write error") comment:NSLocalizedString(@"Ocspackage_write_error_warn_comment", @"Warning about ocspackage write error comment") style:NSCriticalAlertStyle];
+		[self removeFile:ocsPkgPath];
 		return;
 	}
 	
@@ -180,6 +182,7 @@
 		
 		if (![filemgr copyPath:[configuration cacertFilePath] toPath:ocsPkgCacertFilePath handler:nil]) {
 			[context displayAlert:NSLocalizedString(@"Cacert_file_copy_error_warn",@"Warning about cacert.pem file copy error") comment:NSLocalizedString(@"Ocspackage_write_error_warn_comment", @"Warning about ocspackage write error comment") style:NSCriticalAlertStyle];
+			[self removeFile:ocsPkgPath];
 			return;
 		}
 	}
@@ -226,6 +229,7 @@
 		} else {
 			//Invalid periodificty value
 			[context displayAlert:NSLocalizedString(@"Periodicity_warn", @"Peridocity warn") comment:NSLocalizedString(@"Periodicity_warn_comment", @"Periodicity warn comment") style:NSCriticalAlertStyle];
+			[self removeFile:ocsPkgPath];
 			return;
 		}
 	}
@@ -236,6 +240,7 @@
 	
 	if (![launchdCfgFile writeToFile:ocsPkgLaunchdFilePath atomically: YES encoding:NSUTF8StringEncoding error:NULL]) {
 		[context displayAlert:NSLocalizedString(@"Launchd_file_write_error_warn",@"Warning about org.ocsng.agent.plit file write error") comment:NSLocalizedString(@"Ocspackage_write_error_warn_comment", @"Warning about ocspackage write error comment") style:NSCriticalAlertStyle];
+		[self removeFile:ocsPkgPath];
 		return;
 	}
 	
@@ -244,6 +249,7 @@
 	if ([configuration now] == 1) {
 		if (![filemgr createFileAtPath:ocsPkgNowFilePath contents:nil attributes:nil]) {
 			[context displayAlert:NSLocalizedString(@"Now_file_write_error_warn",@"Warning about now file write error") comment:NSLocalizedString(@"Ocspackage_write_error_warn_comment", @"Warning about ocspackage write error comment") style:NSCriticalAlertStyle];
+			[self removeFile:ocsPkgPath];
 			return;
 		}
 	}
@@ -285,6 +291,17 @@
 	}
 }
 
+- (BOOL) removeFile:(NSString *)path {
+	BOOL returnValue = YES;
+	
+	if ([filemgr fileExistsAtPath:path]) {
+		returnValue = [filemgr removeFileAtPath:path handler:nil];
+	}
+	
+	return returnValue;
+}
+			
+			
 //Famous dealloc for memory management
 - (void) dealloc {
 	[context release];
