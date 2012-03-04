@@ -1,0 +1,89 @@
+////////////////////////////////////////////////////////////////////////////////////
+//                                                                                //
+// OCSINVENTORY-NG                                                                //
+//                                                                                //
+// Copyleft Guillaume PROTET 2012                                                 //
+// Web : http://www.ocsinventory-ng.org                                           //
+//                                                                                //
+//                                                                                //
+// This code is open source and may be copied and modified as long as the source  //
+// code is always made freely available.                                          //
+// Please refer to the General Public Licence http://www.gnu.org/                 //
+//                                                                                //
+////////////////////////////////////////////////////////////////////////////////////
+
+
+//Yes button
+"Yes" = "Yes";
+
+//No button
+"No" = "No";
+
+//Warning about invalid OCS package file
+"Invalid_pkg_file" = "Invalid OCS MacOSX agent installer file";
+
+//Warning about invalid OCS package comment
+"Invalid_pkg_file_comment" = "Please choose an OCS MacOSX agent installer pkg file path";
+
+//Warning about invalid server address
+"Invalid_srv_addr" = "Invalid OCS server address";
+
+//Warning about invalid server address comment
+"Invalid_srv_addr_comment" = "Please check and re-enter your OCS server address";
+
+//Warning about missing certificate file
+"Missing_cert_warn" = "You have enabled Download feature but you don't specify a certificate file...\n\nDo you want to continue ?";
+
+//Warning about missing certificate file comment
+"Missing_cert_warn_comment" = "If you don't specifiy a certificate file, Download feature won't work";
+
+//Peridocity warn
+"Periodicity_warn"="Invalid periodicity value";
+
+//Periodicity warn comment
+"Periodicity_warn_comment"="Please enter a valid number value";
+
+//Warning about already existing ocspackage file
+"Ocspackage_already_exists_warn" = "ocspackage.pkg file already exists in export directory...\n\nDo you want to continue ?";
+
+//Warning about already existing ocspackage file comment
+"Ocspackage_already_exists_warn_comment"= "The previous ocspackage.pkg file will be deleted";
+
+//Warning about ocspackage remove error
+"Ocspackage_remove_error_warn" = "Error while removing ocspackage.pkg file !!!" ;
+
+//Warning about ocspackage remove error comment
+"Ocspackage_remove_error_warn_comment" = "Check if you have enough permissions on existing file" ;
+
+//Warning about ocspackage copy error
+"Ocspackage_copy_error_warn" = "Error while copying ocspackage.pkg file !!!";
+
+//Warning about ocspackage copy error comment
+"Ocspackage_copy_error_warn_comment" = "Check if you have enough permissions to read source file and write the new file";
+
+//Warning about ocspackage write error comment
+"Ocspackage_write_error_warn_comment" = "Check if you have enough permissions to write new ocspackage.pkg file";
+
+//Warning about plugins directory remove error
+"Plugins_remove_error_warn" = "Error removing plugins dir in ocspackage.pkg file !!!";
+
+//Warning about preinstall copy error
+"Preinstall_copy_error_warn" = "Error while copying preinstall file !!!";
+
+//Warning about ocsinventory-agent.cfg file write error
+"Configuration_file_write_error_warn" = "Error while creating ocsinventory-agent.cfg file !!!";
+
+//Warning about modules.conf file write error
+"Modules_file_write_error_warn" = "Error while creating modules.conf file !!!";
+
+//Warning about cacert.pem file copy error
+"Cacert_file_copy_error_warn" = "Error while copying modules.conf file !!!";
+
+//Warning about org.ocsng.agent.plist file write error
+"Launchd_file_write_error_warn" = "Error while creating org.ocsng.agent.plist file !!!";
+
+//Warning about now file write error
+"Now_file_write_error_warn" = "Error while creating now file !!!";
+
+//Message for succefull created package
+"Package_succesfully_created" = "OCS MacOSX custom install package successfully created at %@";

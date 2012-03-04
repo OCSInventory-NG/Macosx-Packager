@@ -1,0 +1,8 @@
+//
+// Prefix header for all source files of the 'ocs_agent_packager' target in the 'ocs_agent_packager' project
+//
+
+#ifdef __OBJC__
+    #import <Cocoa/Cocoa.h>
+#endif
+

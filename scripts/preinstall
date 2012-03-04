@@ -1,0 +1,46 @@
+#!/bin/sh
+
+#Setting path to pckage resources directory
+PREFIX=$1/Contents/Resources
+
+#Files we want to copy
+AGENT_CFG_PATH="ocsinventory-agent.cfg"
+MODULES_CFG_PATH="modules.conf"
+LAUNCHD_CFG_PATH="org.ocsng.agent.plist"
+SERVERDIR_CFG_PATH="serverdir"
+NOW_PATH="now"
+CACERT_PATH="cacert.pem"
+
+
+#Create temporary dir neeeded by postinstall script
+mkdir -p /tmp/ocs_installer
+
+if [ -f $PREFIX/$AGENT_CFG_PATH ]
+then
+  cp $PREFIX/$AGENT_CFG_PATH /tmp/ocs_installer 
+fi
+
+if [ -f $PREFIX/$MODULES_CFG_PATH ]
+then
+  cp $PREFIX/$MODULES_CFG_PATH /tmp/ocs_installer
+fi
+
+if [ -f $PREFIX/$LAUNCHD_CFG_PATH ]
+then
+  cp $PREFIX/$LAUNCHD_CFG_PATH /tmp/ocs_installer
+fi
+
+if [ -f $PREFIX/$SERVERDIR_CFG_PATH ]
+then
+  cp $PREFIX/$SERVERDIR_CFG_PATH /tmp/ocs_installer
+fi
+
+if [ -f $PREFIX/$NOW_PATH ] 
+then
+  cp $PREFIX/$NOW_PATH /tmp/ocs_installer
+fi
+
+if [ -f $PREFIX/$CACERT_PATH ]
+then
+  cp $PREFIX/$CACERT_PATH /tmp/ocs_installer
+fi
