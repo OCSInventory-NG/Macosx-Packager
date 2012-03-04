@@ -14,79 +14,79 @@
 
 
 //Yes button
-"Yes" = "Yes";
+"Yes" = "Oui";
 
 //No button
-"No" = "No";
+"No" = "Non";
 
 //Warning about invalid OCS package file
-"Invalid_pkg_file" = "Invalid OCS MacOSX agent installer file";
+"Invalid_pkg_file" = "Fichier d'installation de l'agent OCS MacOSX invalide";
 
 //Warning about invalid OCS package comment
-"Invalid_pkg_file_comment" = "Please choose an OCS MacOSX agent installer pkg file path";
+"Invalid_pkg_file_comment" = "Veuillez choisir un fichier d'installation de l'agent OCS MacOSX";
 
 //Warning about invalid server address
-"Invalid_srv_addr" = "Invalid OCS server address";
+"Invalid_srv_addr" = "Adresse du server OCS invalide";
 
 //Warning about invalid server address comment
-"Invalid_srv_addr_comment" = "Please check and re-enter your OCS server address";
+"Invalid_srv_addr_comment" = "Veuillez saisir de nouveau l'adresse du serveur OCS";
 
 //Warning about missing certificate file
-"Missing_cert_warn" = "You have enabled Download feature but you don't specify a certificate file...\n\nDo you want to continue ?";
+"Missing_cert_warn" = "Vous avez activé la fonctionnalité de télé-déploiement mais vous n'avez pas spécifié de fichier certificat...\n\nVoulez-vous continuer ?";
 
 //Warning about missing certificate file comment
-"Missing_cert_warn_comment" = "If you don't specifiy a certificate file, Download feature won't work";
+"Missing_cert_warn_comment" = "Si vous ne spécifiez pas de fichier certificat, la fonctionnalité de télé-déploiment ne fonctionnera pas";
 
 //Peridocity warn
-"Periodicity_warn"="Invalid periodicity value";
+"Periodicity_warn"="Valeur de la pérodicité invalide";
 
 //Periodicity warn comment
-"Periodicity_warn_comment"="Please enter a valid number value";
+"Periodicity_warn_comment"="Veuillez rentrer un nombre valide";
 
 //Warning about already existing ocspackage file
-"Ocspackage_already_exists_warn" = "ocspackage.pkg file already exists in export directory...\n\nDo you want to continue ?";
+"Ocspackage_already_exists_warn" = "Le fichier ocspackage.pkg existe déjà dans le dossier d'export...\n\nVouslez-vous continuer ?";
 
 //Warning about already existing ocspackage file comment
-"Ocspackage_already_exists_warn_comment"= "The previous ocspackage.pkg file will be deleted";
+"Ocspackage_already_exists_warn_comment"= "le fichier ocspackage.pkg existant sera écrasé";
 
 //Warning about ocspackage remove error
-"Ocspackage_remove_error_warn" = "Error while removing ocspackage.pkg file !!!" ;
+"Ocspackage_remove_error_warn" = "Erreur lors de la suppression du fichier ocspackage.pkg !!!" ;
 
 //Warning about ocspackage remove error comment
-"Ocspackage_remove_error_warn_comment" = "Check if you have enough permissions on existing file" ;
+"Ocspackage_remove_error_warn_comment" = "Vérifiez que vous avez les permissions suffisantes sur le fichier existant" ;
 
 //Warning about ocspackage copy error
-"Ocspackage_copy_error_warn" = "Error while copying ocspackage.pkg file !!!";
+"Ocspackage_copy_error_warn" = "Erreur lors de la copie du fichier ocspackage.pkg !!!";
 
 //Warning about ocspackage copy error comment
-"Ocspackage_copy_error_warn_comment" = "Check if you have enough permissions to read source file and write the new file";
+"Ocspackage_copy_error_warn_comment" = "Vérifiez que vous avez les permissions suffisantes pour lire le fichier source et écrire le nouveau fichier";
 
 //Warning about ocspackage write error comment
-"Ocspackage_write_error_warn_comment" = "Check if you have enough permissions to write new ocspackage.pkg file";
+"Ocspackage_write_error_warn_comment" = "Vérifiez que vous avez les permissions suffisantes pour écrire le nouveau fichier ocspackage.pkg";
 
 //Warning about plugins directory remove error
-"Plugins_remove_error_warn" = "Error removing plugins dir in ocspackage.pkg file !!!";
+"Plugins_remove_error_warn" = "Erreur lors de la suppressin du dossier plugins dans le fichier ocspackage.pkg !!!";
 
 //Warning about preinstall copy error
-"Preinstall_copy_error_warn" = "Error while copying preinstall file !!!";
+"Preinstall_copy_error_warn" = "Erreur lors de la copie du fichier preinstall !!!";
 
 //Warning about ocsinventory-agent.cfg file write error
-"Configuration_file_write_error_warn" = "Error while creating ocsinventory-agent.cfg file !!!";
+"Configuration_file_write_error_warn" = "Erreur lors de la création du fichier ocsinventory-agent.cfg !!!";
 
 //Warning about modules.conf file write error
-"Modules_file_write_error_warn" = "Error while creating modules.conf file !!!";
+"Modules_file_write_error_warn" = "Erreur lors de la création du fichier modules.conf !!!";
 
 //Warning about cacert.pem file copy error
-"Cacert_file_copy_error_warn" = "Error while copying modules.conf file !!!";
+"Cacert_file_copy_error_warn" = "Erreur lors de la copie du fichier cacert.pem !!!";
 
 //Warning about org.ocsng.agent.plist file write error
-"Launchd_file_write_error_warn" = "Error while creating org.ocsng.agent.plist file !!!";
+"Launchd_file_write_error_warn" = "Erreur lors de la copie du fichier org.ocsng.agent.plist !!!";
 
 //Warning about now file write error
-"Now_file_write_error_warn" = "Error while creating now file !!!";
+"Now_file_write_error_warn" = "Erreur lors de la création du fichier now !!!";
 
 //Message for succefull created package
-"Package_succesfully_created" = "OCS MacOSX custom install package successfully created";
+"Package_succesfully_created" = "Le paquet d'installation personnalisée de l'agent OCS MacOSX a été créé avec succès";
 
 //Message for succefull created package_comment
-"Package_succesfully_created_comment" = "ocspackage.pkg has been created in %@ directory";
+"Package_succesfully_created_comment" = "Le fichier ocspackage.pkg a été créé dans le dossier %@";

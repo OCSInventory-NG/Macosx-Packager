@@ -64,6 +64,8 @@
 /* Begin PBXFileReference section */
 		06007C5014E32CC900B9ED43 /* Configuration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Configuration.h; sourceTree = "<group>"; };
 		06007C5114E32CC900B9ED43 /* Configuration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Configuration.m; sourceTree = "<group>"; };
+		060111251504015C00D694E3 /* French */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = French; path = French.lproj/ExportWindow.nib; sourceTree = "<group>"; };
+		060111261504016D00D694E3 /* French */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = French; path = French.lproj/ConfigurationWindow.nib; sourceTree = "<group>"; };
 		06047DB114DEF51B00CCCAD4 /* ConfigurationWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigurationWindowController.h; sourceTree = "<group>"; };
 		06047DB214DEF51B00CCCAD4 /* ConfigurationWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigurationWindowController.m; sourceTree = "<group>"; };
 		0628DF2014E096D800E7FC16 /* ExportWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExportWindowController.h; sourceTree = "<group>"; };
@@ -277,6 +279,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				06A67C1214E1E44B008F382B /* English */,
+				060111251504015C00D694E3 /* French */,
 			);
 			name = ExportWindow.nib;
 			sourceTree = "<group>";
@@ -302,6 +305,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				29B97319FDCFA39411CA2CEA /* English */,
+				060111261504016D00D694E3 /* French */,
 			);
 			name = ConfigurationWindow.nib;
 			sourceTree = "<group>";

@@ -77,7 +77,7 @@
 "Modules_file_write_error_warn" = "Error while creating modules.conf file !!!";
 
 //Warning about cacert.pem file copy error
-"Cacert_file_copy_error_warn" = "Error while copying modules.conf file !!!";
+"Cacert_file_copy_error_warn" = "Error while copying cacert.pem file !!!";
 
 //Warning about org.ocsng.agent.plist file write error
 "Launchd_file_write_error_warn" = "Error while creating org.ocsng.agent.plist file !!!";
@@ -86,7 +86,7 @@
 "Now_file_write_error_warn" = "Error while creating now file !!!";
 
 //Message for succefull created package
-"Package_succesfully_created" = "OCS MacOSX custom install package successfully created";
+"Package_succesfully_created" = "OCS MacOSX agent custom install package successfully created";
 
 //Message for succefull created package_comment
-"Package_succesfully_created_comment" = "ocspackage.pkg has been created in %@ directory";
+"Package_succesfully_created_comment" = "ocspackage.pkg file has been created in %@ directory";
