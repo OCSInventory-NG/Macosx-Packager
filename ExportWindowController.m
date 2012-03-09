@@ -58,6 +58,13 @@
 	NSString *ocsPkgLaunchdFilePath = [NSString stringWithFormat:@"%@/%@/Contents/Resources/org.ocsng.agent.plist",[exportPath stringValue],@"ocspackage.pkg"];
 	NSString *ocsPkgNowFilePath = [NSString stringWithFormat:@"%@/%@/Contents/Resources/now",[exportPath stringValue],@"ocspackage.pkg"];
 
+
+	//No export path filled
+	if ( ![[exportPath stringValue] length] > 0 ) {
+		[context displayAlert:NSLocalizedString(@"Invalid_export_path", @"Warning about invalid export path") comment:NSLocalizedString(@"Invalid_export_path_comment", @"Warning about invalid export path comment") style:NSCriticalAlertStyle];
+		return;
+	}
+	
 	//We check if ocspackage.pkg already exists
 	if ([filemgr fileExistsAtPath:ocsPkgPath]) {
 		NSAlert *existsWrn = [[NSAlert alloc] init];

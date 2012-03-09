@@ -1,5 +1,6 @@
 Revision history for Ocsinventory NG Packager for MacOSX       
 
+       * Add a warning if no export path filled
        * Add French internationalization
        * Remove created ocspackage.pkg file if errors occurs while generating customizations
        * Fix mistakes in English.lproj/Localizable.strings and French.lproj/Localizable.strings

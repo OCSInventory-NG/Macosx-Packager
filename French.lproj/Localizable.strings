@@ -90,3 +90,9 @@
 
 //Message for succefull created package_comment
 "Package_succesfully_created_comment" = "Le fichier ocspackage.pkg a été créé dans le dossier %@";
+
+//Warning about invalid export path
+"Invalid_export_path" = "Répertoire d'export invalide";
+
+//Warning about invalid export path comment
+"Invalid_export_path_comment" = "Veuillez choisir un répertoire d'export";
