@@ -44,10 +44,10 @@
 "Periodicity_warn_comment"="Veuillez rentrer un nombre valide";
 
 //Warning about already existing ocspackage file
-"Ocspackage_already_exists_warn" = "Le fichier ocspackage.pkg existe déjà dans le dossier d'export...\n\nVouslez-vous continuer ?";
+"Ocspackage_already_exists_warn" = "Le fichier ocspackage.pkg existe déjà dans le dossier d'export...\n\nVoulez-vous continuer ?";
 
 //Warning about already existing ocspackage file comment
-"Ocspackage_already_exists_warn_comment"= "le fichier ocspackage.pkg existant sera écrasé";
+"Ocspackage_already_exists_warn_comment"= "Le fichier ocspackage.pkg existant sera écrasé";
 
 //Warning about ocspackage remove error
 "Ocspackage_remove_error_warn" = "Erreur lors de la suppression du fichier ocspackage.pkg !!!" ;
