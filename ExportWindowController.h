@@ -27,6 +27,7 @@
 	
 	NSFileManager *filemgr;
 	IBOutlet NSTextField *exportPath;
+	IBOutlet NSTextField *exportFileName;
 
 }
 

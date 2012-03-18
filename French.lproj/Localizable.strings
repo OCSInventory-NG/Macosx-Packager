@@ -43,29 +43,29 @@
 //Periodicity warn comment
 "Periodicity_warn_comment"="Veuillez rentrer un nombre valide";
 
-//Warning about already existing ocspackage file
-"Ocspackage_already_exists_warn" = "Le fichier ocspackage.pkg existe déjà dans le dossier d'export...\n\nVoulez-vous continuer ?";
+//Warning about already existing package file
+"Package_already_exists_warn" = "Le fichier %@ existe déjà dans le dossier d'export...\n\nVoulez-vous continuer ?";
 
-//Warning about already existing ocspackage file comment
-"Ocspackage_already_exists_warn_comment"= "Le fichier ocspackage.pkg existant sera écrasé";
+//Warning about already existing package file comment
+"Package_already_exists_warn_comment"= "Le fichier %@ existant sera écrasé";
 
-//Warning about ocspackage remove error
-"Ocspackage_remove_error_warn" = "Erreur lors de la suppression du fichier ocspackage.pkg !!!" ;
+//Warning about package remove error
+"Package_remove_error_warn" = "Erreur lors de la suppression du fichier %@ !!!" ;
 
-//Warning about ocspackage remove error comment
-"Ocspackage_remove_error_warn_comment" = "Vérifiez que vous avez les permissions suffisantes sur le fichier existant" ;
+//Warning about package remove error comment
+"Package_remove_error_warn_comment" = "Vérifiez que vous avez les permissions suffisantes sur le fichier existant" ;
 
-//Warning about ocspackage copy error
-"Ocspackage_copy_error_warn" = "Erreur lors de la copie du fichier ocspackage.pkg !!!";
+//Warning about package copy error
+"Package_copy_error_warn" = "Erreur lors de la copie du fichier %@ !!!";
 
-//Warning about ocspackage copy error comment
-"Ocspackage_copy_error_warn_comment" = "Vérifiez que vous avez les permissions suffisantes pour lire le fichier source et écrire le nouveau fichier";
+//Warning about package copy error comment
+"Package_copy_error_warn_comment" = "Vérifiez que vous avez les permissions suffisantes pour lire le fichier source et écrire le nouveau fichier";
 
-//Warning about ocspackage write error comment
-"Ocspackage_write_error_warn_comment" = "Vérifiez que vous avez les permissions suffisantes pour écrire le nouveau fichier ocspackage.pkg";
+//Warning about package write error comment
+"Package_write_error_warn_comment" = "Vérifiez que vous avez les permissions suffisantes pour écrire le nouveau fichier %@";
 
 //Warning about plugins directory remove error
-"Plugins_remove_error_warn" = "Erreur lors de la suppressin du dossier plugins dans le fichier ocspackage.pkg !!!";
+"Plugins_remove_error_warn" = "Erreur lors de la suppressin du dossier plugins dans le fichier %@ !!!";
 
 //Warning about preinstall copy error
 "Preinstall_copy_error_warn" = "Erreur lors de la copie du fichier preinstall !!!";
@@ -89,10 +89,16 @@
 "Package_succesfully_created" = "Le paquet d'installation personnalisée de l'agent OCS MacOSX a été créé avec succès";
 
 //Message for succefull created package_comment
-"Package_succesfully_created_comment" = "Le fichier ocspackage.pkg a été créé dans le dossier %@";
+"Package_succesfully_created_comment" = "Le fichier %@ a été créé dans le dossier %@";
 
 //Warning about invalid export path
 "Invalid_export_path" = "Répertoire d'export invalide";
 
 //Warning about invalid export path comment
 "Invalid_export_path_comment" = "Veuillez choisir un répertoire d'export";
+
+//Warning about invalid export file name
+"Invalid_export_file_name" = "Nom de fichier invalide";
+
+//Warning about invalid export file name comment
+"Invalid_export_file_name_comment" = "Veuillez saisir un nom de fichier valide";
