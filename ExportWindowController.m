@@ -118,12 +118,18 @@
 		return;
 	}
 	
-	//We copy preinstall script
+	//We copy preinstall and preupgrade scripts
 	NSString *preinstallPath = [NSString stringWithFormat:@"%@/preinstall",[[NSBundle mainBundle] resourcePath]];
 	
 	if ([filemgr fileExistsAtPath:preinstallPath]) {
 		if (![filemgr copyPath:preinstallPath toPath:[NSString stringWithFormat:@"%@/preinstall",ocsPkgResourcesPath] handler:nil]) {
 			[context displayAlert:NSLocalizedString(@"Preinstall_copy_error_warn",@"Warning about preinstall copy error") comment:[NSString stringWithFormat:NSLocalizedString(@"Package_write_error_warn_comment", @"Warning about package write error comment"),pkgFileName] style:NSCriticalAlertStyle];
+			[self removeFile:ocsPkgPath];
+			return;
+		}
+		
+		if (![filemgr copyPath:preinstallPath toPath:[NSString stringWithFormat:@"%@/preupgrade",ocsPkgResourcesPath] handler:nil]) {
+			[context displayAlert:NSLocalizedString(@"Preupgrade_copy_error_warn",@"Warning about preupgrade copy error") comment:[NSString stringWithFormat:NSLocalizedString(@"Package_write_error_warn_comment", @"Warning about package write error comment"),pkgFileName] style:NSCriticalAlertStyle];
 			[self removeFile:ocsPkgPath];
 			return;
 		}

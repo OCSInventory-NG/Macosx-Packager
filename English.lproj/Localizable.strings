@@ -70,6 +70,9 @@
 //Warning about preinstall copy error
 "Preinstall_copy_error_warn" = "Error while copying preinstall file !!!";
 
+//Warning about preupgrade copy error
+"Preupgrade_copy_error_warn" = "Error while copying preupgrade file !!!";
+
 //Warning about ocsinventory-agent.cfg file write error
 "Configuration_file_write_error_warn" = "Error while creating ocsinventory-agent.cfg file !!!";
 
