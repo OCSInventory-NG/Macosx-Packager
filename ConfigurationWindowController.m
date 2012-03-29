@@ -33,7 +33,7 @@
 	//We add ourself references in context
 	[context setConfigurationWindowController:self];
 	
-	//Create object for storing configuration add its reference in context
+	//Create object for storing configuration and its reference in context
 	if (!configuration) {
 		configuration = [[Configuration alloc] init];
 	}
@@ -51,6 +51,7 @@
 	[userPeriodicity setStringValue:@"5"];
 	[userDebugMode setState:1];
 	[userDownload setState:1];
+	[userLazy setState:0];
 	[userStartup setState:1];
 	[userNow setState:0];
 	
@@ -166,6 +167,7 @@
 	[configuration setCacertFilePath:[userCacertFile stringValue]];
 	[configuration setDebugmode:[userDebugMode state]];
 	[configuration setDownload:[userDownload state]];
+	[configuration setLazy:[userLazy state]];
 	[configuration setPeriodicity:[userPeriodicity stringValue]];
 	[configuration setStartup:[userStartup state]];
 	[configuration setNow:[userNow state]]; 

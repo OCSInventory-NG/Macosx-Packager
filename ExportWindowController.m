@@ -160,8 +160,15 @@
 	
 	if ([configuration debugmode]) {
 		[ocsAgentCfgContent appendString:@"debug=1\n"];
+	} else {
+		[ocsAgentCfgContent appendString:@"debug=0\n"];
 	}
 	
+	if ([configuration lazy]) {
+		[ocsAgentCfgContent appendString:@"lazy=1\n"];
+	} else {
+		[ocsAgentCfgContent appendString:@"lazy=0\n"];
+	}
 	
 	if(![ocsAgentCfgContent writeToFile:ocsPkgCfgFilePath atomically: YES encoding:NSUTF8StringEncoding error:NULL]) {
 		[context displayAlert:NSLocalizedString(@"Configuration_file_write_error_warn",@"Warning about ocsinventory-agent.cfg file write error") comment:[NSString stringWithFormat:NSLocalizedString(@"Package_write_error_warn_comment", @"Warning about package write error comment"),pkgFileName] style:NSCriticalAlertStyle];

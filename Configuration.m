@@ -126,6 +126,17 @@
 	}
 }
 
+//Accessors for lazy variable
+- (int) lazy {
+	return lazy;
+}
+
+- (void) setLazy:(int)newLazy {
+	if (lazy != newLazy) {
+		lazy = newLazy;
+	}
+}
+
 //Accessors for startup variable
 - (int) startup {
 	return startup;

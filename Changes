@@ -1,5 +1,7 @@
 Revision history for Ocsinventory NG Packager for MacOSX       
 
+       * Set debug and lazy options to 0 in generated ocsinventory-agent.cfg file if their check boxes are not selected
+       * Add a new configuration option to set lazy mode
        * Change build options to prevent crashes under macOSX 10.4 64 bits
        * Create preupgrade script during package creation
        * Add availibity to set generated package file name

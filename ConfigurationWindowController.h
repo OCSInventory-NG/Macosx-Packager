@@ -29,6 +29,7 @@
 	IBOutlet NSTextField *userCacertFile;
 	IBOutlet NSButton *userDebugMode;
 	IBOutlet NSButton *userDownload;
+	IBOutlet NSButton *userLazy;
 	IBOutlet NSTextField *userPeriodicity;
 	IBOutlet NSButton *userStartup;
 	IBOutlet NSButton *userNow;

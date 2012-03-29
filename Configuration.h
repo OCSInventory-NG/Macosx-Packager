@@ -33,6 +33,7 @@
 	
 	int debugmode;
 	int download;
+	int lazy;
 	int startup;
 	int now;
 
@@ -67,6 +68,9 @@
 
 - (int) download;
 - (void) setDownload:(int)newDownload;
+
+- (int) lazy;
+- (void) setLazy:(int)newLazy;
 
 - (int) startup;
 - (void) setStartup:(int)newStartup;
