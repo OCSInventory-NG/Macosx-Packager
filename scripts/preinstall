@@ -1,7 +1,15 @@
 #!/bin/sh
 
-#Setting path to pckage resources directory
-PREFIX=$1/Contents/Resources
+#Setting path to package resources directory
+RESOURCES=$1/Contents/Resources
+
+#Setting temp directory
+if [ $3 ]  #If run from NetInstall
+then
+  TMP_DIR=$3/tmp/ocs_installer
+else
+  TMP_DIR=/tmp/ocs_installer
+fi
 
 #Files we want to copy
 AGENT_CFG_PATH="ocsinventory-agent.cfg"
@@ -13,34 +21,34 @@ CACERT_PATH="cacert.pem"
 
 
 #Create temporary dir neeeded by postinstall script
-mkdir -p /tmp/ocs_installer
+mkdir -p $TMP_DIR 
 
-if [ -f $PREFIX/$AGENT_CFG_PATH ]
+if [ -f $RESOURCES/$AGENT_CFG_PATH ]
 then
-  cp $PREFIX/$AGENT_CFG_PATH /tmp/ocs_installer 
+  cp $RESOURCES/$AGENT_CFG_PATH $TMP_DIR 
 fi
 
-if [ -f $PREFIX/$MODULES_CFG_PATH ]
+if [ -f $RESOURCES/$MODULES_CFG_PATH ]
 then
-  cp $PREFIX/$MODULES_CFG_PATH /tmp/ocs_installer
+  cp $RESOURCES/$MODULES_CFG_PATH $TMP_DIR
 fi
 
-if [ -f $PREFIX/$LAUNCHD_CFG_PATH ]
+if [ -f $RESOURCES/$LAUNCHD_CFG_PATH ]
 then
-  cp $PREFIX/$LAUNCHD_CFG_PATH /tmp/ocs_installer
+  cp $RESOURCES/$LAUNCHD_CFG_PATH $TMP_DIR
 fi
 
-if [ -f $PREFIX/$SERVERDIR_CFG_PATH ]
+if [ -f $RESOURCES/$SERVERDIR_CFG_PATH ]
 then
-  cp $PREFIX/$SERVERDIR_CFG_PATH /tmp/ocs_installer
+  cp $RESOURCES/$SERVERDIR_CFG_PATH $TMP_DIR
 fi
 
-if [ -f $PREFIX/$NOW_PATH ] 
+if [ -f $RESOURCES/$NOW_PATH ] 
 then
-  cp $PREFIX/$NOW_PATH /tmp/ocs_installer
+  cp $RESOURCES/$NOW_PATH $TMP_DIR
 fi
 
-if [ -f $PREFIX/$CACERT_PATH ]
+if [ -f $RESOURCES/$CACERT_PATH ]
 then
-  cp $PREFIX/$CACERT_PATH /tmp/ocs_installer
+  cp $RESOURCES/$CACERT_PATH $TMP_DIR 
 fi
