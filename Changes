@@ -1,5 +1,6 @@
 Revision history for Ocsinventory NG Packager for MacOSX       
 
+0.8
        * Improve preinstall script to able to deploy MacOSX agent using NetInstall
        * Set debug and lazy options to 0 in generated ocsinventory-agent.cfg file if their check boxes are not selected
        * Add a new configuration option to set lazy mode
