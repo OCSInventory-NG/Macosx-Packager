@@ -38,13 +38,13 @@
 "Missing_cert_warn_comment" = "Si vous ne spécifiez pas de fichier certificat, la fonctionnalité de télé-déploiment ne fonctionnera pas";
 
 //Peridocity warn
-"Periodicity_warn"="Valeur de la pérodicité invalide";
+"Periodicity_warn"="Valeur de la périodicité invalide";
 
 //Periodicity warn comment
-"Periodicity_warn_comment"="Veuillez rentrer un nombre valide";
+"Periodicity_warn_comment"="Veuillez saisir un nombre valide";
 
 //Warning about already existing package file
-"Package_already_exists_warn" = "Le fichier %@ existe déjà dans le dossier d'export...\n\nVoulez-vous continuer ?";
+"Package_already_exists_warn" = "Le fichier %@ existe déjà dans le dossier d'export.\n\nVoulez-vous continuer ?";
 
 //Warning about already existing package file comment
 "Package_already_exists_warn_comment"= "Le fichier %@ existant sera écrasé";
@@ -65,7 +65,7 @@
 "Package_write_error_warn_comment" = "Vérifiez que vous avez les permissions suffisantes pour écrire le nouveau fichier %@";
 
 //Warning about plugins directory remove error
-"Plugins_remove_error_warn" = "Erreur lors de la suppressin du dossier plugins dans le fichier %@ !!!";
+"Plugins_remove_error_warn" = "Erreur lors de la suppression du dossier plugins dans le fichier %@ !!!";
 
 //Warning about preinstall copy error
 "Preinstall_copy_error_warn" = "Erreur lors de la copie du fichier preinstall !!!";
