@@ -105,55 +105,55 @@
 }
 
 //Accessors for debugmode variable
-- (int) debugmode {
+- (NSInteger) debugmode {
 	return debugmode;
 }
 
-- (void) setDebugmode:(int)newDebugmode {
+- (void) setDebugmode:(NSInteger)newDebugmode {
 	if (debugmode != newDebugmode) {
 		debugmode = newDebugmode;
 	}
 }
 
 //Accessors for download variable
-- (int) download {
+- (NSInteger) download {
 	return download;
 }
 
-- (void) setDownload:(int)newDownload {
+- (void) setDownload:(NSInteger)newDownload {
 	if (download != newDownload) {
 		download = newDownload;
 	}
 }
 
 //Accessors for lazy variable
-- (int) lazy {
+- (NSInteger) lazy {
 	return lazy;
 }
 
-- (void) setLazy:(int)newLazy {
+- (void) setLazy:(NSInteger)newLazy {
 	if (lazy != newLazy) {
 		lazy = newLazy;
 	}
 }
 
 //Accessors for startup variable
-- (int) startup {
+- (NSInteger) startup {
 	return startup;
 }
 
-- (void) setStartup:(int)newStartup {
+- (void) setStartup:(NSInteger)newStartup {
 	if (startup != newStartup) {
 		startup = newStartup;
 	}
 }
 
 //Accessors for now variable
-- (int) now {
+- (NSInteger) now {
 	return now;
 }
 
-- (void) setNow:(int)newNow {
+- (void) setNow:(NSInteger)newNow {
 	if (now != newNow) {
 		now = newNow;
 	}

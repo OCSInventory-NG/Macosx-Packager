@@ -9,7 +9,7 @@
 	<key>CFBundleIconFile</key>
 	<string>packager_logo</string>
 	<key>CFBundleIdentifier</key>
-	<string>org.ocsinventory-ng.ocs_macosx_agent_packager</string>
+	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>

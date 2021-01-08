@@ -31,11 +31,11 @@
 	NSString *nowFilePath;
 	NSString *cfgFilePath;
 	
-	int debugmode;
-	int download;
-	int lazy;
-	int startup;
-	int now;
+	NSInteger debugmode;
+    NSInteger download;
+    NSInteger lazy;
+    NSInteger startup;
+    NSInteger now;
 
 	NSFileManager *filemgr;
 	
@@ -63,20 +63,20 @@
 - (NSString *) cacertFilePath;
 - (void) setCacertFilePath:(NSString *)newCacertFilePath;
 
-- (int) debugmode;
-- (void) setDebugmode:(int)newDebugmode;
+- (NSInteger) debugmode;
+- (void) setDebugmode:(NSInteger)newDebugmode;
 
-- (int) download;
-- (void) setDownload:(int)newDownload;
+- (NSInteger) download;
+- (void) setDownload:(NSInteger)newDownload;
 
-- (int) lazy;
-- (void) setLazy:(int)newLazy;
+- (NSInteger) lazy;
+- (void) setLazy:(NSInteger)newLazy;
 
-- (int) startup;
-- (void) setStartup:(int)newStartup;
+- (NSInteger) startup;
+- (void) setStartup:(NSInteger)newStartup;
 
-- (int) now;
-- (void) setNow:(int)newNow;
+- (NSInteger) now;
+- (void) setNow:(NSInteger)newNow;
 
 
 @end
