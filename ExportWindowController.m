@@ -50,7 +50,7 @@
 
 - (IBAction) generatePackage:(id)sender {
 	
-	NSMutableString *ocsAgentCfgContent;
+    NSMutableString *ocsAgentCfgContent = nil;
 	NSMutableString *modulesCfgContent;
 	NSMutableString *protocolName;
 	NSMutableString *launchdCfgFile;
@@ -328,7 +328,7 @@
 	
 	//Getting cacert file path
 	if (result == NSModalResponseOK) {
-		[exportPath setStringValue:[panel filename]];
+		[exportPath setStringValue:[[panel URL] path]];
 	}
 }
 	

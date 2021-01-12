@@ -80,7 +80,7 @@
 	
 	//Getting cacert file path
 	if (result == NSModalResponseOK) {
-		[userCacertFile setStringValue:[panel filename]];
+		[userCacertFile setStringValue:[[panel URL] path]];
 	}
 }
 
@@ -100,7 +100,7 @@
 	
 	//Getting cacert file path
 	if (result == NSModalResponseOK) {
-		[userOcsPkgFile setStringValue:[panel filename]];
+		[userOcsPkgFile setStringValue:[[panel URL] path]];
 	}
 	
 }

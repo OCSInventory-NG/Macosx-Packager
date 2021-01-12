@@ -7,17 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		002E2E0225AC55C800EF4390 /* ConfigurationWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 002E2E0425AC55C800EF4390 /* ConfigurationWindow.xib */; };
 		00781BD425A772C600F72473 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		00A772F825AC8D7300E276B8 /* ExportWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00A772FA25AC8D7300E276B8 /* ExportWindow.xib */; };
 		06007C5214E32CC900B9ED43 /* Configuration.m in Sources */ = {isa = PBXBuildFile; fileRef = 06007C5114E32CC900B9ED43 /* Configuration.m */; };
 		06047DB314DEF51B00CCCAD4 /* ConfigurationWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06047DB214DEF51B00CCCAD4 /* ConfigurationWindowController.m */; };
 		0628DF2214E096D800E7FC16 /* ExportWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0628DF2114E096D800E7FC16 /* ExportWindowController.m */; };
 		06A3D37F14E6FAA900854953 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A3D37E14E6FAA900854953 /* AppDelegate.m */; };
-		06A67C1514E1E45A008F382B /* ExportWindow.nib in Resources */ = {isa = PBXBuildFile; fileRef = 06A67C1414E1E45A008F382B /* ExportWindow.nib */; };
 		06B385C414F1692F00493861 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 06B385C314F1692F00493861 /* Localizable.strings */; };
 		06B3877714F1A8DA00493861 /* preinstall in Resources */ = {isa = PBXBuildFile; fileRef = 06B3877614F1A8DA00493861 /* preinstall */; };
 		06E5A2CF14F0321B00F3CF31 /* packager_logo.icns in Resources */ = {isa = PBXBuildFile; fileRef = 06E5A2CE14F0321B00F3CF31 /* packager_logo.icns */; };
 		06EAA44D14EC62D10041F6A8 /* Context.m in Sources */ = {isa = PBXBuildFile; fileRef = 06EAA44C14EC62D10041F6A8 /* Context.m */; };
-		8D11072A0486CEB800E47090 /* ConfigurationWindow.nib in Resources */ = {isa = PBXBuildFile; fileRef = 29B97318FDCFA39411CA2CEA /* ConfigurationWindow.nib */; };
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 /* End PBXBuildFile section */
@@ -53,13 +53,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		0047D7E325A8A119008981BF /* en */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = en; path = en.lproj/ConfigurationWindow.nib; sourceTree = "<group>"; };
-		0047D7E425A8A119008981BF /* en */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = en; path = en.lproj/ExportWindow.nib; sourceTree = "<group>"; };
+		002E2E0625AC55CE00EF4390 /* fr */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = fr; path = fr.lproj/ConfigurationWindow.xib; sourceTree = "<group>"; };
 		0047D7E525A8A119008981BF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		0047D7E625A8A119008981BF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
-		0047D7E725A8A11E008981BF /* fr */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = fr; path = fr.lproj/ConfigurationWindow.nib; sourceTree = "<group>"; };
-		0047D7E825A8A11E008981BF /* fr */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = fr; path = fr.lproj/ExportWindow.nib; sourceTree = "<group>"; };
 		0047D7E925A8A11E008981BF /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		00A772FC25AC8D7800E276B8 /* fr */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = fr; path = fr.lproj/ExportWindow.xib; sourceTree = "<group>"; };
+		00AB427725ACA1F7007F529F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/ConfigurationWindow.xib; sourceTree = "<group>"; };
+		00AB427825ACA1F7007F529F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/ExportWindow.xib; sourceTree = "<group>"; };
 		06007C5014E32CC900B9ED43 /* Configuration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Configuration.h; sourceTree = "<group>"; };
 		06007C5114E32CC900B9ED43 /* Configuration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Configuration.m; sourceTree = "<group>"; };
 		06047DB114DEF51B00CCCAD4 /* ConfigurationWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigurationWindowController.h; sourceTree = "<group>"; };
@@ -163,11 +163,11 @@
 			children = (
 				06B3877614F1A8DA00493861 /* preinstall */,
 				06E5A2CE14F0321B00F3CF31 /* packager_logo.icns */,
-				29B97318FDCFA39411CA2CEA /* ConfigurationWindow.nib */,
-				06A67C1414E1E45A008F382B /* ExportWindow.nib */,
 				8D1107310486CEB800E47090 /* Info.plist */,
 				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
 				06B385C314F1692F00493861 /* Localizable.strings */,
+				002E2E0425AC55C800EF4390 /* ConfigurationWindow.xib */,
+				00A772FA25AC8D7300E276B8 /* ExportWindow.xib */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -223,6 +223,7 @@
 				en,
 				de,
 				fr,
+				Base,
 			);
 			mainGroup = 29B97314FDCFA39411CA2CEA /* ocs_agent_packager */;
 			projectDirPath = "";
@@ -238,9 +239,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8D11072A0486CEB800E47090 /* ConfigurationWindow.nib in Resources */,
+				002E2E0225AC55C800EF4390 /* ConfigurationWindow.xib in Resources */,
 				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
-				06A67C1514E1E45A008F382B /* ExportWindow.nib in Resources */,
+				00A772F825AC8D7300E276B8 /* ExportWindow.xib in Resources */,
 				06E5A2CF14F0321B00F3CF31 /* packager_logo.icns in Resources */,
 				06B385C414F1692F00493861 /* Localizable.strings in Resources */,
 				06B3877714F1A8DA00493861 /* preinstall in Resources */,
@@ -266,13 +267,22 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		06A67C1414E1E45A008F382B /* ExportWindow.nib */ = {
+		002E2E0425AC55C800EF4390 /* ConfigurationWindow.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				0047D7E425A8A119008981BF /* en */,
-				0047D7E825A8A11E008981BF /* fr */,
+				002E2E0625AC55CE00EF4390 /* fr */,
+				00AB427725ACA1F7007F529F /* Base */,
 			);
-			name = ExportWindow.nib;
+			name = ConfigurationWindow.xib;
+			sourceTree = "<group>";
+		};
+		00A772FA25AC8D7300E276B8 /* ExportWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				00A772FC25AC8D7800E276B8 /* fr */,
+				00AB427825ACA1F7007F529F /* Base */,
+			);
+			name = ExportWindow.xib;
 			sourceTree = "<group>";
 		};
 		06B385C314F1692F00493861 /* Localizable.strings */ = {
@@ -290,15 +300,6 @@
 				0047D7E525A8A119008981BF /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		29B97318FDCFA39411CA2CEA /* ConfigurationWindow.nib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				0047D7E325A8A119008981BF /* en */,
-				0047D7E725A8A11E008981BF /* fr */,
-			);
-			name = ConfigurationWindow.nib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -327,7 +328,7 @@
 				INSTALL_PATH = "$(HOME)/Applications";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.ocsinventory-ng.ocs_macosx_agent_packager";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.ocsinventory-ng.ocs-macosx-agent-packager";
 				PRODUCT_NAME = ocs_macosx_agent_packager;
 				SDKROOT = macosx;
 				WRAPPER_EXTENSION = app;
@@ -356,7 +357,7 @@
 				INSTALL_PATH = "$(HOME)/Applications";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.ocsinventory-ng.ocs_macosx_agent_packager";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.ocsinventory-ng.ocs-macosx-agent-packager";
 				PRODUCT_NAME = OcsInventory_MacOSX_Packager;
 				SDKROOT = macosx;
 				WRAPPER_EXTENSION = app;
