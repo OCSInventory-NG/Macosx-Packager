@@ -76,11 +76,11 @@
 	[panel setAllowedFileTypes:fileTypes];
 	
 	//Running browse panel
-	int result = [panel runModalForTypes:fileTypes];
+	NSInteger result = [panel runModal];
 	
 	//Getting cacert file path
-	if (result == NSOKButton) {
-		[userCacertFile setStringValue:[panel filename]];
+	if (result == NSModalResponseOK) {
+		[userCacertFile setStringValue:[[panel URL] path]];
 	}
 }
 
@@ -96,11 +96,11 @@
 	[panel setAllowedFileTypes:fileTypes];
 	
 	//Running browse panel
-	int result = [panel runModalForTypes:fileTypes];
+	NSInteger result = [panel runModal];
 	
 	//Getting cacert file path
-	if (result == NSOKButton) {
-		[userOcsPkgFile setStringValue:[panel filename]];
+	if (result == NSModalResponseOK) {
+		[userOcsPkgFile setStringValue:[[panel URL] path]];
 	}
 	
 }
@@ -122,14 +122,14 @@
 - (IBAction) getUserConfiguration:(id)sender {
 	
 	//No OCS pkg file path filled
-	if ( ![[userOcsPkgFile stringValue] length] > 0 ) {
-		[context displayAlert:NSLocalizedString(@"Invalid_pkg_file", @"Warning about invalid OCS package file") comment:NSLocalizedString(@"Invalid_pkg_file_comment", @"Warning about invalid OCS package comment") style:NSCriticalAlertStyle];
+	if ( !([[userOcsPkgFile stringValue] length] > 0 )) {
+		[context displayAlert:NSLocalizedString(@"Invalid_pkg_file", @"Warning about invalid OCS package file") comment:NSLocalizedString(@"Invalid_pkg_file_comment", @"Warning about invalid OCS package comment") style:NSAlertStyleCritical];
 		return;
 	}
 	
 	//No OCS server address filled
-	if ( ![[userServer stringValue] length] > 0 ) {
-		[context displayAlert:NSLocalizedString(@"Invalid_srv_addr", @"Warning about invalid server address") comment:NSLocalizedString(@"Invalid_srv_addr_comment", @"Warning about invalid server address comment") style:NSCriticalAlertStyle];
+	if ( !([[userServer stringValue] length] > 0 )) {
+		[context displayAlert:NSLocalizedString(@"Invalid_srv_addr", @"Warning about invalid server address") comment:NSLocalizedString(@"Invalid_srv_addr_comment", @"Warning about invalid server address comment") style:NSAlertStyleCritical];
 		return;
 	}
 	
@@ -141,7 +141,7 @@
 		[caCertWrn addButtonWithTitle:NSLocalizedString(@"No", @"No Button")];
 		[caCertWrn setMessageText:NSLocalizedString(@"Missing_cert_warn",@"Warning about missing certificate file")];
 		[caCertWrn setInformativeText:NSLocalizedString(@"Missing_cert_warn_comment",@"Warning about missing certificate file comment")];
-		[caCertWrn setAlertStyle:NSCriticalAlertStyle]; 
+		[caCertWrn setAlertStyle:NSAlertStyleCritical];
 		
 		if ([caCertWrn runModal] != NSAlertFirstButtonReturn) {
 			//Button 'No' was clicked, we don't continue
@@ -153,8 +153,8 @@
 	}
 	
 	//No periodicity value filled
-	if ( ![[userPeriodicity stringValue] length] > 0) {
-		[context displayAlert:NSLocalizedString(@"Periodicity_warn", @"Peridocity warn") comment:NSLocalizedString(@"Periodicity_warn_comment", @"Periodicity warn comment") style:NSCriticalAlertStyle];
+	if ( !([[userPeriodicity stringValue] length] > 0)) {
+		[context displayAlert:NSLocalizedString(@"Periodicity_warn", @"Peridocity warn") comment:NSLocalizedString(@"Periodicity_warn_comment", @"Periodicity warn comment") style:NSAlertStyleCritical];
 		return;
 	}
 	
