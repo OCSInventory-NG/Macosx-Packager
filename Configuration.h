@@ -17,28 +17,28 @@
 
 
 @interface Configuration : NSObject {
-
-	NSString *server;
-	NSString *tag;
-	NSString *logfile;
-	NSString *protocol;
-	NSString *periodicity;
-	NSString *ocsPkgFilePath;
-	NSString *modulesFilePath;
-	NSString *serverdirFilePath;
-	NSString *cacertFilePath;	
-	NSString *launchdFilePath;
-	NSString *nowFilePath;
-	NSString *cfgFilePath;
-	
-	NSInteger debugmode;
+    
+    NSString *server;
+    NSString *tag;
+    NSString *logfile;
+    NSString *protocol;
+    NSString *periodicity;
+    NSString *ocsPkgFilePath;
+    NSString *modulesFilePath;
+    NSString *serverdirFilePath;
+    NSString *cacertFilePath;
+    NSString *launchdFilePath;
+    NSString *nowFilePath;
+    NSString *cfgFilePath;
+    
+    NSInteger debugmode;
     NSInteger download;
     NSInteger lazy;
     NSInteger startup;
     NSInteger now;
-
-	NSFileManager *filemgr;
-	
+    
+    NSFileManager *filemgr;
+    
 }
 
 //Accessors for variables
