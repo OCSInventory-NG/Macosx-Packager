@@ -104,6 +104,42 @@
 	}
 }
 
+//Accessors for authUser variable
+- (NSString *) authUser {
+    return [[authUser retain] autorelease];
+}
+
+- (void) setUser:(NSString *)newAuthUser {
+    if (authUser != newAuthUser) {
+        [authUser release];
+        authUser = [newAuthUser copy];
+    }
+}
+
+//Accessors for authPwd variable
+- (NSString *) authPwd {
+    return [[authPwd retain] autorelease];
+}
+
+- (void) setPwd:(NSString *)newAuthPwd {
+    if (authPwd != newAuthPwd) {
+        [authPwd release];
+        authPwd = [newAuthPwd copy];
+    }
+}
+
+//Accessors for authUser variable
+- (NSString *) authRealm {
+    return [[authRealm retain] autorelease];
+}
+
+- (void) setRealm:(NSString *)newAuthRealm {
+    if (authRealm != newAuthRealm) {
+        [authRealm release];
+        authRealm = [newAuthRealm copy];
+    }
+}
+
 //Accessors for debugmode variable
 - (NSInteger) debugmode {
 	return debugmode;
