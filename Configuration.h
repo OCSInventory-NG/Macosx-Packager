@@ -27,6 +27,9 @@
     NSString *modulesFilePath;
     NSString *serverdirFilePath;
     NSString *cacertFilePath;
+    NSString *authUser;
+    NSString *authPwd;
+    NSString *authRealm;
     NSString *launchdFilePath;
     NSString *nowFilePath;
     NSString *cfgFilePath;
@@ -62,6 +65,15 @@
 
 - (NSString *) cacertFilePath;
 - (void) setCacertFilePath:(NSString *)newCacertFilePath;
+
+- (NSString *) authUser;
+- (void) setUser:(NSString *)newAuthUser;
+
+- (NSString *) authPwd;
+- (void) setPwd:(NSString *)newAuthPwd;
+
+- (NSString *) authRealm;
+- (void) setRealm:(NSString *)newAuthRealm;
 
 - (NSInteger) debugmode;
 - (void) setDebugmode:(NSInteger)newDebugmode;

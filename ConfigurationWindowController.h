@@ -27,6 +27,9 @@
 	IBOutlet NSTextField *userLogFile;
 	IBOutlet NSTextField *userTag;
 	IBOutlet NSTextField *userCacertFile;
+    IBOutlet NSTextField *authUser;
+    IBOutlet NSTextField *authPwd;
+    IBOutlet NSTextField *authRealm;
 	IBOutlet NSButton *userDebugMode;
 	IBOutlet NSButton *userDownload;
 	IBOutlet NSButton *userLazy;

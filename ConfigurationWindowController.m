@@ -151,7 +151,7 @@
 		
 		[caCertWrn release];
 	}
-	
+    
 	//No periodicity value filled
 	if ( !([[userPeriodicity stringValue] length] > 0)) {
 		[context displayAlert:NSLocalizedString(@"Periodicity_warn", @"Peridocity warn") comment:NSLocalizedString(@"Periodicity_warn_comment", @"Periodicity warn comment") style:NSAlertStyleCritical];
@@ -165,6 +165,11 @@
 	[configuration setLogfile:[userLogFile stringValue]];
 	[configuration setTag:[userTag stringValue]];
 	[configuration setCacertFilePath:[userCacertFile stringValue]];
+    
+    [configuration setUser:[authUser stringValue]];
+    [configuration setPwd:[authPwd stringValue]];
+    [configuration setRealm:[authRealm stringValue]];
+    
 	[configuration setDebugmode:[userDebugMode state]];
 	[configuration setDownload:[userDownload state]];
 	[configuration setLazy:[userLazy state]];

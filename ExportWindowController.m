@@ -174,6 +174,29 @@
         [ocsAgentCfgContent appendString:@"lazy=0\n"];
     }
     
+    if ([configuration authUser]) {
+        [ocsAgentCfgContent appendString:@"user="];
+        NSData *user = [[configuration authUser] dataUsingEncoding:NSUTF8StringEncoding];
+        NSString *userEncoded = [user base64EncodedStringWithOptions:kNilOptions];
+        [ocsAgentCfgContent appendString:userEncoded];
+        [ocsAgentCfgContent appendString:@"\n"];
+    }
+    
+    if ([configuration authPwd]) {
+        [ocsAgentCfgContent appendString:@"password="];
+        NSData *pwd = [[configuration authPwd] dataUsingEncoding:NSUTF8StringEncoding];
+        NSString *pwdEncoded = [pwd base64EncodedStringWithOptions:kNilOptions];
+        [ocsAgentCfgContent appendString:pwdEncoded];
+        [ocsAgentCfgContent appendString:@"\n"];
+    }
+    
+    if ([configuration authRealm]) {
+        [ocsAgentCfgContent appendString:@"realm="];
+        [ocsAgentCfgContent appendString:[configuration authRealm]];
+        [ocsAgentCfgContent appendString:@"\n"];
+    }
+    
+    
     if(![ocsAgentCfgContent writeToFile:ocsPkgCfgFilePath atomically: YES encoding:NSUTF8StringEncoding error:NULL]) {
         [context displayAlert:NSLocalizedString(@"Configuration_file_write_error_warn",@"Warning about ocsinventory-agent.cfg file write error") comment:[NSString stringWithFormat:NSLocalizedString(@"Package_write_error_warn_comment", @"Warning about package write error comment"),pkgFileName] style:NSAlertStyleCritical];
         [self removeFile:ocsPkgPath];
