@@ -88,6 +88,42 @@
 //Warning about now file write error
 "Now_file_write_error_warn" = "Error while creating now file !!!";
 
+//Warning about unsupported flat package
+"Unsupported_flat_pkg_warn" = "Unsupported flat OCS package format";
+
+//Warning about unsupported flat package comment
+"Unsupported_flat_pkg_warn_comment" = "The selected flat package does not match the expected UnixAgent layout.";
+
+//Warning about flat package expand error
+"Flat_pkg_expand_warn" = "Error while expanding flat package !!!";
+
+//Warning about flat package expand error comment
+"Flat_pkg_expand_warn_comment" = "Check that the source package is a valid flat package.\n\n%@";
+
+//Warning about flat package flatten error
+"Flat_pkg_flatten_warn" = "Error while rebuilding flat package !!!";
+
+//Warning about flat package flatten error comment
+"Flat_pkg_flatten_warn_comment" = "Check that the temporary package workspace is valid and writable.\n\n%@";
+
+//Warning about flat package resource staging error
+"Flat_pkg_stage_warn" = "Error while staging flat package resources !!!";
+
+//Warning about flat package resource staging error comment
+"Flat_pkg_stage_warn_comment" = "Required file %@ is missing from the temporary flat package workspace.";
+
+//Warning about temporary package workspace create error
+"Temp_workspace_create_warn" = "Error while creating temporary package workspace !!!";
+
+//Warning about temporary package workspace create error comment
+"Temp_workspace_create_warn_comment" = "Check that you have enough permissions to write in the temporary directory.";
+
+//Warning about temporary package workspace cleanup error
+"Temp_workspace_cleanup_warn" = "Error while cleaning temporary package workspace !!!";
+
+//Warning about temporary package workspace cleanup error comment
+"Temp_workspace_cleanup_warn_comment" = "The output package may still have been created, but %@ could not be removed.";
+
 //Message for succefull created package
 "Package_succesfully_created" = "OCS MacOSX agent custom install package successfully created";
 

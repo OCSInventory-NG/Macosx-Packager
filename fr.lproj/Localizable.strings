@@ -88,6 +88,42 @@
 //Warning about now file write error
 "Now_file_write_error_warn" = "Erreur lors de la création du fichier now !!!";
 
+//Warning about unsupported flat package
+"Unsupported_flat_pkg_warn" = "Format de paquet OCS flat non supporté";
+
+//Warning about unsupported flat package comment
+"Unsupported_flat_pkg_warn_comment" = "Le paquet flat sélectionné ne correspond pas à la structure attendue de l'agent Unix.";
+
+//Warning about flat package expand error
+"Flat_pkg_expand_warn" = "Erreur lors de l'extraction du paquet flat !!!";
+
+//Warning about flat package expand error comment
+"Flat_pkg_expand_warn_comment" = "Vérifiez que le paquet source est bien un paquet flat valide.\n\n%@";
+
+//Warning about flat package flatten error
+"Flat_pkg_flatten_warn" = "Erreur lors de la reconstruction du paquet flat !!!";
+
+//Warning about flat package flatten error comment
+"Flat_pkg_flatten_warn_comment" = "Vérifiez que l'espace de travail temporaire du paquet est valide et accessible en écriture.\n\n%@";
+
+//Warning about flat package resource staging error
+"Flat_pkg_stage_warn" = "Erreur lors de la préparation des ressources du paquet flat !!!";
+
+//Warning about flat package resource staging error comment
+"Flat_pkg_stage_warn_comment" = "Le fichier requis %@ est absent de l'espace de travail temporaire du paquet flat.";
+
+//Warning about temporary package workspace create error
+"Temp_workspace_create_warn" = "Erreur lors de la création de l'espace de travail temporaire du paquet !!!";
+
+//Warning about temporary package workspace create error comment
+"Temp_workspace_create_warn_comment" = "Vérifiez que vous avez les permissions suffisantes pour écrire dans le répertoire temporaire.";
+
+//Warning about temporary package workspace cleanup error
+"Temp_workspace_cleanup_warn" = "Erreur lors du nettoyage de l'espace de travail temporaire du paquet !!!";
+
+//Warning about temporary package workspace cleanup error comment
+"Temp_workspace_cleanup_warn_comment" = "Le paquet de sortie a peut-être bien été créé, mais %@ n'a pas pu être supprimé.";
+
 //Message for succefull created package
 "Package_succesfully_created" = "Le paquet d'installation personnalisée de l'agent OCS MacOSX a été créé avec succès";
 

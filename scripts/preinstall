@@ -1,14 +1,19 @@
 #!/bin/sh
 
-#Setting path to package resources directory
-RESOURCES=$1/Contents/Resources
+SCRIPT_DIR=$(cd "$(dirname "$0")" && pwd)
+SOURCE_HINT="${1:-}"
+LEGACY_RESOURCES="$SOURCE_HINT/Contents/Resources"
+SOURCE_PARENT_RESOURCES="$(dirname "$SOURCE_HINT")/../Resources"
+SCRIPT_RESOURCES="$SCRIPT_DIR/Resources"
+SCRIPT_PARENT_RESOURCES="$SCRIPT_DIR/../Resources"
+SCRIPT_GRANDPARENT_RESOURCES="$SCRIPT_DIR/../../Resources"
 
 #Setting temp directory
-if [ $3 ]  #If run from NetInstall
+if [ -n "${3:-}" ]  #If run from NetInstall
 then
-  TMP_DIR=$3/tmp/ocs_installer
+  TMP_DIR="$3/tmp/ocs_installer"
 else
-  TMP_DIR=/tmp/ocs_installer
+  TMP_DIR="/tmp/ocs_installer"
 fi
 
 #Files we want to copy
@@ -19,36 +24,72 @@ SERVERDIR_CFG_PATH="serverdir"
 NOW_PATH="now"
 CACERT_PATH="cacert.pem"
 
+resolve_source_file() {
+  FILE_NAME="$1"
+
+  for CANDIDATE_DIR in \
+    "$SCRIPT_DIR" \
+    "$SCRIPT_RESOURCES" \
+    "$SCRIPT_PARENT_RESOURCES" \
+    "$SCRIPT_GRANDPARENT_RESOURCES" \
+    "$LEGACY_RESOURCES" \
+    "$SOURCE_PARENT_RESOURCES"
+  do
+    if [ -f "$CANDIDATE_DIR/$FILE_NAME" ]
+    then
+      echo "$CANDIDATE_DIR/$FILE_NAME"
+      return 0
+    fi
+  done
+
+  return 1
+}
+
+copy_staged_file() {
+  SOURCE_FILE="$1"
+  FILE_NAME="$2"
+
+  if ! cp "$SOURCE_FILE" "$TMP_DIR/$FILE_NAME"
+  then
+    echo "ERROR: failed to copy $FILE_NAME from $SOURCE_FILE to $TMP_DIR" >&2
+    exit 1
+  fi
+}
+
+copy_required_file() {
+  FILE_NAME="$1"
+  SOURCE_FILE=$(resolve_source_file "$FILE_NAME")
+  if [ -z "$SOURCE_FILE" ]
+  then
+    echo "ERROR: required installer file $FILE_NAME was not found in supported resource locations" >&2
+    exit 1
+  fi
+
+  copy_staged_file "$SOURCE_FILE" "$FILE_NAME"
+}
+
+copy_optional_file() {
+  FILE_NAME="$1"
+  SOURCE_FILE=$(resolve_source_file "$FILE_NAME")
+  if [ -z "$SOURCE_FILE" ]
+  then
+    return 0
+  fi
+
+  copy_staged_file "$SOURCE_FILE" "$FILE_NAME"
+}
 
 #Create temporary dir neeeded by postinstall script
-mkdir -p $TMP_DIR 
-
-if [ -f $RESOURCES/$AGENT_CFG_PATH ]
+if ! mkdir -p "$TMP_DIR"
 then
-  cp $RESOURCES/$AGENT_CFG_PATH $TMP_DIR 
+  echo "ERROR: failed to create temporary staging directory $TMP_DIR" >&2
+  exit 1
 fi
 
-if [ -f $RESOURCES/$MODULES_CFG_PATH ]
-then
-  cp $RESOURCES/$MODULES_CFG_PATH $TMP_DIR
-fi
+copy_required_file "$AGENT_CFG_PATH"
+copy_required_file "$MODULES_CFG_PATH"
+copy_required_file "$LAUNCHD_CFG_PATH"
 
-if [ -f $RESOURCES/$LAUNCHD_CFG_PATH ]
-then
-  cp $RESOURCES/$LAUNCHD_CFG_PATH $TMP_DIR
-fi
-
-if [ -f $RESOURCES/$SERVERDIR_CFG_PATH ]
-then
-  cp $RESOURCES/$SERVERDIR_CFG_PATH $TMP_DIR
-fi
-
-if [ -f $RESOURCES/$NOW_PATH ] 
-then
-  cp $RESOURCES/$NOW_PATH $TMP_DIR
-fi
-
-if [ -f $RESOURCES/$CACERT_PATH ]
-then
-  cp $RESOURCES/$CACERT_PATH $TMP_DIR 
-fi
+copy_optional_file "$SERVERDIR_CFG_PATH"
+copy_optional_file "$NOW_PATH"
+copy_optional_file "$CACERT_PATH"
